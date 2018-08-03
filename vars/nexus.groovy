@@ -27,11 +27,11 @@ def nexus(String server_url, String user, String passw, String repo, String f_na
         new File("./${f_name}") << resp.data
     }
 
-    def encodeZipFile( Object data ) throws UnsupportedEncodingException {
+    
+}
+
+def encodeZipFile( Object data ) throws UnsupportedEncodingException {
     	def entity = new FileEntity( (File) data, "application/x-gzip" );
     	entity.setContentType( "application/x-gzip" );
     	return entity
-    }
-
 }
-
